@@ -25,7 +25,7 @@ This Django project implements a robust authentication system using SQLite as th
 2. Install Django and other dependencies using `pip install -r requirements.txt`.
 3. Run migrations to create the SQLite database schema: `python manage.py migrate`.
 4. Start the development server: `python manage.py runserver`.
-5. Access the application in your web browser at `http://localhost:8000`.
+5. Access the application in your web browser at `http://localhost:8000` or `http://127.0.0.1:8000`.
 
 ## Contributing
 
