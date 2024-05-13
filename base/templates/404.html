@@ -1,13 +1,13 @@
 {% extends 'master.html' %}
 
 {% block title %}
-Error Code 404 - Page Not Found
+    Error Code 404 - Page Not Found
 {% endblock %}
 
 {% block content %}
-<p>
-    The requested URL was not found on this server. That's all we know.
-    <hr>
-    Back to <a href="{% url 'login' %}">home</a>?
-</p>
+    <p>
+        The requested URL was not found on this server. That's all we know.
+        <hr>
+        Back to <a href="{% url 'login' %}">home</a>?
+    </p>
 {% endblock %}
