@@ -28,12 +28,15 @@ def register(request):
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
 
-        if password == confirm_password:
-            User.objects.create(username=username, email=email, password=password)
+        try:
+            if password == confirm_password:
+                User.objects.create(username=username, email=email, password=password)
+                return redirect('login')
+            else:
+                error_message = "Password didn't matched"
+                return render(request, 'register.html', {'error_message':error_message})
+        except Exception:
             return redirect('login')
-        else:
-            error_message = "Password didn't matched"
-            return render(request, 'register.html', {'error_message':error_message})
 
     return render(request, 'register.html')
 
@@ -45,6 +48,7 @@ def dashboard(request):
             return render(request, 'dashboard.html', {'data':data})
         except User.DoesNotExist:
             del request.session['user_id']
+            
     return redirect('login')
 
 def logout(request):
