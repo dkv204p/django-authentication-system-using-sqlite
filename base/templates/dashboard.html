@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background-color: #555;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <ul>
+        <li>Dashboard</li>
+        <li>Profile</li>
+        <li>Settings</li>
+        <li><a style="text-decoration: none; color: yellow" href="logout/">Logout</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <h2>Dashboard</h2>
+    <p>Hello {{ data.username }},</p>
+    <p>Your email is {{ data.email }}.</p>
+    <p>Welcome to your dashboard!</p>
+</div>
+
+</body>
+</html>
